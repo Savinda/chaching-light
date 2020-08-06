@@ -81,11 +81,11 @@ const parseCoupons = (coupons, domain) => {
     const couponSubmitOverlay = document.createElement('div');
     couponSubmitOverlay.className = '_submit__overlay';
     couponSubmitOverlay.innerHTML =
+      '<span class="close-button">x</span>' +
       '<h3>Do you have a coupon for this site?</h3>' +
       '<div><label>Code:</label><input type="text" class="code"/></div>' +
       '<div><label>Description:</label><input type="text" class="desc"/></div>' +
-      '<div><button class="submit-button">Submit</button></div>' +
-      '<div><button class="close-button">X</button></div>';
+      '<div><button class="submit-button">Submit</button></div>';
     couponSubmitOverlay.style.display = 'none';
     document.body.appendChild(couponSubmitOverlay);
 
@@ -103,10 +103,12 @@ const displayCouponList = () => {
       document.querySelector('._submit__overlay').style.display = 'block';
     });
   // Close submit overlay
-  document.querySelector('.close-button').addEventListener('click', () => {
-    console.log('close overlay');
-    document.querySelector('._submit__overlay').style.display = 'none';
-  });
+  document
+    .querySelector('._submit__overlay .close-button')
+    .addEventListener('click', () => {
+      console.log('close overlay');
+      document.querySelector('._submit__overlay').style.display = 'none';
+    });
 
   // Show/hide list of coupons
   document.querySelector('._coupon__button').addEventListener('click', () => {
@@ -127,4 +129,23 @@ const displayCouponList = () => {
       const desc = document.querySelector('._submit__overlay .desc').value;
       submitCoupon(code, desc, domain);
     });
+
+  // Copy coupon on click
+  document.querySelectorAll('._coupon__list .code').forEach((codeItem) => {
+    codeItem.addEventListener('click', () => {
+      const codeStr = codeItem.innerHTML;
+      copyToClipboard(codeStr);
+    });
+  });
+};
+
+// Copy to clipboard
+const copyToClipboard = (str) => {
+  const input = document.createElement('textarea');
+  input.innerHTML = str;
+  document.body.appendChild(input);
+  input.select();
+  const result = document.execCommand('copy');
+  document.body.removeChild(input);
+  return result;
 };
