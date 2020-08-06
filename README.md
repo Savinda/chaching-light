@@ -1,6 +1,6 @@
 # Coupon Finder Chrome Extension
 
-(![Demo Image](https://github.com/khoadodk/coupon-finder/blob/master/image.PNG))
+![Demo Image](https://github.com/khoadodk/coupon-finder/blob/master/image.PNG)
 
 ## How to use
 
