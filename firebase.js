@@ -12,6 +12,7 @@ firebase.initializeApp(firebaseConfig);
 
 // Get the message from browser
 chrome.runtime.onMessage.addListener((msg, sender, response) => {
+  // Fetch coupons from db
   if (msg.command == 'fetch') {
     const domain = msg.data.domain;
     const encoded_domain = btoa(domain);
@@ -27,6 +28,35 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
           request: msg
         });
       });
+  }
+  // Post coupons to db
+  if (msg.command == 'post') {
+    const domain = msg.data.domain;
+    const encoded_domain = btoa(domain);
+    const code = msg.data.code;
+    const desc = msg.data.desc;
+    try {
+      const newPost = firebase
+        .database()
+        .ref('/domain/' + encoded_domain)
+        .push()
+        .set({ code, desc });
+      const postId = newPost.key;
+      // send response to background.html
+      response({
+        type: 'result',
+        status: 'success',
+        data: postId,
+        request: msg
+      });
+    } catch (e) {
+      response({
+        type: 'result',
+        status: 'fail',
+        data: e,
+        request: msg
+      });
+    }
   }
   return true;
 });
