@@ -1,8 +1,8 @@
 {
-    "name": "Coupon Master",
-    "version": "0.1",
-    "description": "Finding the best coupon for your shopping site",
-    "author": "Khoa Do",
+    "name": "ChaChing Light",
+    "version": "0.0.1",
+    "description": "Find coupons for your favorite stores",
+    "author": "Savinda Rukshan",
     "permissions": [
         "activeTab",
         "<all_urls>",
@@ -19,9 +19,10 @@
         "run_at": "document_end"
     }],
     "icons": {
-        "16": "icon16.png",
-        "48": "icon48.png",
-        "128": "icon128.png"
+        "16": "icon_16.png",
+        "32": "icon_32.png",
+        "48": "icon_48.png",
+        "128": "icon_128.png"
     },
     "manifest_version": 2,
     "content_security_policy": "script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'"

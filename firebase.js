@@ -1,11 +1,12 @@
-var firebaseConfig = {
-  apiKey: 'AIzaSyDE76wJV9TqaaOp3eVFknlEqdm598ZUkCs',
-  authDomain: 'coupon-finder-e0dee.firebaseapp.com',
-  databaseURL: 'https://coupon-finder-e0dee.firebaseio.com',
-  projectId: 'coupon-finder-e0dee',
-  storageBucket: 'coupon-finder-e0dee.appspot.com',
-  messagingSenderId: '864265436810',
-  appId: '1:864265436810:web:75f9f3ae6f8383209b3773'
+const firebaseConfig = {
+  apiKey: "AIzaSyAhn0Jr9Ka2TGKvsa2lzLxvhjbmbZMPHkQ",
+  authDomain: "chaching-light.firebaseapp.com",
+  databaseURL: "https://chaching-light.firebaseio.com",
+  projectId: "chaching-light",
+  storageBucket: "chaching-light.appspot.com",
+  messagingSenderId: "896416383985",
+  appId: "1:896416383985:web:9ed2d5d73ce83b1b7b7a50",
+  measurementId: "G-H4RVKHNQTB"
 };
 
 firebase.initializeApp(firebaseConfig);

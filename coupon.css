@@ -1,145 +1,237 @@
 /* button styling */
-.submit-button {
-    padding: 10px;
-    font-size: 10px;
-    background: black;
-    height: auto;
-    color: white;
-    border-radius: 3px;
-    cursor: pointer;
-    text-align: center;
-    margin-bottom: 5px;
-    font-size: 15px;
+._chaching__submit-button {
+    padding: 10px !important;
+    font-size: 10px !important;
+    background: black !important;
+    height: auto !important;
+    color: white !important;
+    border-radius: 3px !important;
+    cursor: pointer !important;
+    text-align: center !important;
+    margin-bottom: 5px !important;
+    font-size: 15px !important;
 }
 
-._coupon__list h1 {
-    font-family: serif;
-    font-size: 26px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 15px;
-    line-height: 26px;
+._chaching__content h1 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    font-size: 26px !important;
+    margin-bottom: 20px !important;
+    border-bottom: 1px solid #eee !important;
+    padding-bottom: 15px !important;
+    line-height: 26px !important;
 }
 
-._coupon__list p {
-    font-family: sans-serif;
-    line-height: 20px;
-    font-size: 16px;
-    text-align: center;
-    font-weight: 500;
-    color: #868585;
-    margin: 0px;
+._chaching__content p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    line-height: 20px !important;
+    font-size: 12px !important;
+    text-align: center !important;
+    font-weight: 400 !important;
+    color: #343434 !important;
+    margin: 0px !important;
+    padding: 5px 0 !important;
 }
 
-._coupon__list ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+._chaching__content ul {
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
-._coupon__list ul li {
-    border-radius: 3px;
-    border: 1px solid #e0e0e0;
-    padding: 15px;
-    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.25);
-    text-transform: uppercase;
-    margin-bottom: 20px;
+._chaching__content ul li {
+    list-style: none !important;
+    background: #fff !important;
+    border-radius: 3px !important;
+    border: 0.5px solid #FFF1CB !important;
+    padding: 15px !important;
+    /* box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.25); */
+    /* text-transform: uppercase !important; */
+    margin-bottom: 15px !important;
 }
 
-._coupon__list .code {
-    background: #ff8d00;
-    color: #fff;
-    padding: 5px;
-    display: inline-block;
-    border-radius: 3px;
-    border: 1px solid #eaeaea;
-    cursor: pointer;
+._chaching__content .code {
+    background: #FFFCF4  !important;
+    color: #FFC941 !important;
+    padding: 5px !important;
+    display: inline-block !important;
+    border-radius: 3px !important;
+    border: 1px solid #FFDF8E !important;
+    cursor: pointer !important;
+    font-weight: bold !important;
+}
+/* ._chaching_coupon__list ul li:hover .code:after{
+    content: "click to copy"
+} */
+
+._chaching__content li p {
+    text-align: left !important;
+    margin-top: 15px !important;
+    text-transform: none !important;
+    font-size: 12px;
+    padding: 0 !important;
 }
 
-._coupon__list li p {
-    text-align: left;
-    margin-top: 10px;
-    margin: 0;
-    text-transform: none;
-    font-size: 14px;
-}
-
-._coupon__list {
+._chaching_coupon__list {
     display: none;
-    height: 30vh;
-    width: 30vw;
-    border-radius: 6px;
-    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.25);
-    border: 1px solid white;
-    background: white;
-    cursor: pointer;
-    padding: 15px;
-    position: fixed;
-    top: 70px;
-    right: 5px;
-    z-index: 9999999999;
-    overflow: hidden;
-    overflow-y: auto;
+    height: 540px !important;
+    width: 360px !important;
+    border-radius: 3px !important;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12), 0 1px 5px 0 rgba(0,0,0,.2) !important;
+    /* border: 1px solid white !important; */
+    background: #FFFCF4 !important;
+    /* cursor: pointer !important; */
+    /* padding: 15px; */
+    position: fixed !important;
+    top: 54px !important;
+    right: 5px !important;
+    z-index: 9999999999 !important;
 }
 
-._coupon__button {
-    height: 40px;
-    width: 50px;
-    border-radius: 6px;
-    border: 1px solid white;
-    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.25);
-    background: #5add26;
-    cursor: pointer;
-    position: fixed;
-    font-family: serif;
-    color: #383636;
-    top: 15px;
-    right: 15px;
-    text-align: center;
-    z-index: 9999999999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 17px;
-    font-weight: bold;
+._chaching_coupon__button {
+    height: 48px !important;
+    width: 48px !important;
+    border-radius: 100px !important;
+    /* border: 0.5px solid #FFDF8E !important; */
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12), 0 1px 5px 0 rgba(0,0,0,.2) !important;
+    background: #FF3636 !important;
+    cursor: pointer !important;
+    position: fixed !important;
+    font-family: serif !important;
+    color: #383636 !important;
+    top: 30px !important;
+    right: 30px !important;
+    text-align: center !important;
+    z-index: 9999999999 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    font-size: 28px !important;
+    line-height: 48px !important;
+    font-weight: bold !important;
+    -webkit-transition: all .3s ease-out !important;
+    transition: all .3s ease-out !important;  
+}
+
+._chaching_coupon__button span.lets-party {
+    padding-top: 5px !important;
+}
+
+._chaching_coupon__button:hover {
+    box-shadow: 0 37px 20px -20px rgba(0,0,0,.2) !important;
 }
 
 /* overlay */
-._submit__overlay {
-    position: fixed;
-    width: 300px;
-    height: auto;
-    top: 50%;
-    left: 50%;
-    margin-left: -110px;
-    margin-top: -120px;
-    background: white;
-    border: 2px solid;
-    z-index: 9999999999999;
-    padding: 10px;
-    box-sizing: border-box;
+._chaching_submit__overlay {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    position: fixed !important;
+    width: 300px !important;
+    height: auto !important;
+    top: 50% !important;
+    left: 50% !important;
+    margin-left: -110px !important;
+    margin-top: -120px !important;
+    border-radius: 3px !important;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12), 0 1px 5px 0 rgba(0,0,0,.2) !important;
+    /* border: 1px solid white !important; */
+    background: #FFFCF4 !important;
+    z-index: 9999999999999 !important;
+    padding: 10px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+}
+
+._chaching_submit__overlay>div {
+    margin: 10px 0 10px 0 !important;
+}
+
+._chaching_submit__overlay label {
+    display: block !important;
+}
+
+._chaching_submit__overlay input {
+    width: 90% !important;
+    border: 0.5px solid !important;
+}
+
+._chaching_submit__overlay ._chaching_close-button {
+    top: -10px !important;
+    right: -10px !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color: red !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+}
+
+/* header styling */
+._chaching__header {
+    height: 54px;
+    line-height: 54px;
+    border-bottom: 0.5px solid #FFF1CB;
+    background: #FFF;
     text-align: center;
+    border-radius: 3px 3px 0 0;
 }
 
-._submit__overlay>div {
-    margin: 10px 0 10px 0;
+._chaching__storelogo {
+    border-radius: 100% !important;
+    margin: 10px !important;
+    width: 32px !important;
+    height: 32px !important;
+    float: left !important;
 }
 
-._submit__overlay label {
-    display: block
+._chaching__heading {
+    margin-right: 42px !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
 }
 
-._submit__overlay input {
-    width: 90%;
-    border: 0.5px solid;
+._chaching__content {
+    overflow: hidden !important;
+    padding: 15px !important;
+    overflow-y: scroll !important;
+    height: 426px !important;
 }
 
-._submit__overlay .close-button {
-    top: -10px;
-    right: -10px;
-    font-size: 18px;
-    font-weight: bold;
-    color: red;
-    border-radius: 50%;
-    cursor: pointer;
+._chaching__footer {
+    background: #FFF !important;
+    height: 60px !important;
+    border-top: 0.5px solid #FFF1CB !important;
+    line-height: 30px !important;
+    border-radius: 0 0 3px 3px !important;
+}
+
+._chaching__footer ul {
+    margin: 0 !important;
+    padding-inline-start: 0 !important;
+    margin-block-start: 0 !important;
+    margin-block-end: 0 !important;
+}
+
+._chaching__footer li {
+    width: 33.33% !important;
+    display: inline-block !important;
+    margin: 0 !important;
+}
+
+._chaching__footer a {
+    display: block !important;
+    height: 60px !important;
+    text-align: center !important;
+    border-bottom: 3px solid #FFF !important;
+    padding-top: 15px !important;
+    opacity: 0.5 !important;
+}
+
+._chaching__footer a:nth-child(0) {
+    border-radius: 0 0 0 3px !important;
+}
+
+._chaching__footer a:nth-child(2) {
+    border-radius: 0 0 3px 0 !important;
+}
+
+._chaching__footer a.active {
+    border-bottom: 3px solid #FFC941 !important;
+    opacity: 1 !important;
 }
