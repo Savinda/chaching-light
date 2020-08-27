@@ -1,5 +1,5 @@
 {
-    "name": "ChaChing Light",
+    "name": "ChaChing Lite",
     "version": "0.0.1",
     "description": "Find coupons for your favorite stores",
     "author": "Savinda Rukshan",
@@ -14,7 +14,7 @@
     },
     "content_scripts": [{
         "matches": ["<all_urls>"],
-        "js": ["app.js"],
+        "js": ["jquery-3.5.1.min.js", "app.js"],
         "css": ["coupon.css"],
         "run_at": "document_end"
     }],

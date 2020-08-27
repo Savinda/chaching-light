@@ -190,10 +190,12 @@
     overflow: hidden !important;
     padding: 15px !important;
     overflow-y: scroll !important;
-    height: 426px !important;
+    height: 200px !important; 
+    width: 100% !important;
 }
 
 ._chaching__footer {
+    margin-top: 426px !important;
     background: #FFF !important;
     height: 60px !important;
     border-top: 0.5px solid #FFF1CB !important;
@@ -234,4 +236,18 @@
 ._chaching__footer a.active {
     border-bottom: 3px solid #FFC941 !important;
     opacity: 1 !important;
+}
+
+._chaching__home:focus {
+    border-bottom: 3px solid #FFC941 !important;
+    opacity: 1 !important;
+}
+._chaching__home:focus ~ ._chaching__home__content {
+    display: block;
+}
+._chaching__list:focus ~ ._chaching__list__content {
+    display: block;
+}
+._chaching__account:focus ~ ._chaching__account__content {
+    display: block;
 }
