@@ -80,22 +80,66 @@ const parseCoupons = (coupons, domain) => {
       '<ul>' +
       couponHTML +
       '</ul></main>' + 
-      // LIST TAB
-      '<main class="_chaching__content" style="display: none">list</main>'+
+      // // LIST TAB
+      '<main class="_chaching__content _chaching__list__content">list</main>' +
       // ACCOUNT TAB
-      '<main class="_chaching__content"  style="display: none">account</main>' +
+      '<main class="_chaching__content _chaching__account__content">account</main>' +
       '<footer class="_chaching__footer">' +
       '<ul>' +
       '<li class="_chaching__nav_item">' +
-      '<a class="_chaching__home" tabindex="0"><img src="https://firebasestorage.googleapis.com/v0/b/chaching-light.appspot.com/o/icon_home.png?alt=media&amp;token=126e04ee-1553-433d-ac95-40bd73aaf91f"></a>' +
+      '<button class="active _chaching__leftmost"><img src="https://firebasestorage.googleapis.com/v0/b/chaching-light.appspot.com/o/icon_home.png?alt=media&token=126e04ee-1553-433d-ac95-40bd73aaf91f"></button>' +
       '</li><li class="_chaching__nav_item">' +
-      '<a class="_chaching__list" tabindex="0"><img src="https://firebasestorage.googleapis.com/v0/b/chaching-light.appspot.com/o/icon_list.png?alt=media&token=c43f436b-288c-4215-86dc-9bd927f4e9aa"></a>' +
+      '<button class="_chaching__mid"><img src="https://firebasestorage.googleapis.com/v0/b/chaching-light.appspot.com/o/icon_list.png?alt=media&token=c43f436b-288c-4215-86dc-9bd927f4e9aa"></button>' +
       '</li><li class="_chaching__nav_item">' + 
-      '<a class="_chaching__account" tabindex="0"><img src="https://firebasestorage.googleapis.com/v0/b/chaching-light.appspot.com/o/icon_account.png?alt=media&token=f39cd090-6039-44d0-99e2-6189893a840c"></a>' +
+      '<button class="_chaching__rightmost"><img src="https://firebasestorage.googleapis.com/v0/b/chaching-light.appspot.com/o/icon_account.png?alt=media&token=f39cd090-6039-44d0-99e2-6189893a840c"></button>' +
       '</li>' +
       '</ul>' +
       '</footer>';
     document.body.appendChild(couponDisplay);
+
+    function myFunction() {
+      var element = document.getElementById("myDiv");
+      element.classList.toggle("mystyle");
+    }
+    // Show/hide list of coupons
+  document.querySelector('._chaching__leftmost').addEventListener('click', () => {
+    // if (document.querySelector('._chaching__home__content').style.display === 'block') {
+    //   document.querySelector('._chaching__list__content').style.display = 'none';
+    //   document.querySelector('._chaching__account__content').style.display = 'none';
+    // } 
+    // else {
+    //   document.querySelector('._chaching__home__content').style.display = 'none';
+    // }
+    document.querySelector('._chaching__home__content').style.display = 'block';
+    document.querySelector('._chaching__list__content').style.display = 'none';
+    document.querySelector('._chaching__account__content').style.display = 'none';
+  });
+
+  document.querySelector('._chaching__mid').addEventListener('click', () => {
+    // if (document.querySelector('._chaching__home__content').style.display === 'none') {
+    //   document.querySelector('._chaching__list__content').style.display = 'block';
+    //   document.querySelector('._chaching__account__content').style.display = 'none';
+    // } 
+    // else {
+    //   document.querySelector('._chaching__list__content').style.display = 'none';
+    // }
+    document.querySelector('._chaching__home__content').style.display = 'none';
+    document.querySelector('._chaching__list__content').style.display = 'block';
+    document.querySelector('._chaching__account__content').style.display = 'none';
+  });
+
+  document.querySelector('._chaching__rightmost').addEventListener('click', () => {
+    // if (document.querySelector('._chaching__home__content').style.display === 'none') {
+    //   document.querySelector('._chaching__list__content').style.display = 'none';
+    //   document.querySelector('._chaching__account__content').style.display = 'block';
+    // } 
+    // else {
+    //   document.querySelector('._chaching__account__content').style.display = 'none';
+    // }
+    document.querySelector('._chaching__home__content').style.display = 'none';
+    document.querySelector('._chaching__list__content').style.display = 'none';
+    document.querySelector('._chaching__account__content').style.display = 'block';
+  });
 
     // button to show list of coupons
     const couponButton = document.createElement('div');
@@ -176,4 +220,3 @@ const copyToClipboard = (str) => {
   return result;
 };
 
-// tab navigation home | list | account

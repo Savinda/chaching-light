@@ -1,4 +1,7 @@
 /* button styling */
+
+*:focus {outline:none !important}
+
 ._chaching__submit-button {
     padding: 10px !important;
     font-size: 10px !important;
@@ -109,6 +112,8 @@
     font-weight: bold !important;
     -webkit-transition: all .3s ease-out !important;
     transition: all .3s ease-out !important;  
+    border-color: transparent !important;
+    box-shadow: none !important;
 }
 
 ._chaching_coupon__button span.lets-party {
@@ -178,6 +183,7 @@
     width: 32px !important;
     height: 32px !important;
     float: left !important;
+    background: url('https://firebasestorage.googleapis.com/v0/b/chaching-light.appspot.com/o/logo_32.png?alt=media&token=23408a8f-58cf-4bc3-844a-bd204d441a7e');
 }
 
 ._chaching__heading {
@@ -190,17 +196,22 @@
     overflow: hidden !important;
     padding: 15px !important;
     overflow-y: scroll !important;
-    height: 200px !important; 
+    height: 426px !important; 
+    /* height: 150px; */
     width: 100% !important;
+    /* display: none; */
 }
 
 ._chaching__footer {
-    margin-top: 426px !important;
+    /* margin-top: 426px !important; */
     background: #FFF !important;
     height: 60px !important;
     border-top: 0.5px solid #FFF1CB !important;
     line-height: 30px !important;
     border-radius: 0 0 3px 3px !important;
+    position: absolute !important;
+    width: 100% !important;
+    top: 480px !important;
 }
 
 ._chaching__footer ul {
@@ -216,38 +227,39 @@
     margin: 0 !important;
 }
 
-._chaching__footer a {
+._chaching__footer button {
     display: block !important;
-    height: 60px !important;
+    /* height: 42px !important; */
+    width: 100% !important;
     text-align: center !important;
+    border: none;
+    background: #FFF !important;
     border-bottom: 3px solid #FFF !important;
     padding-top: 15px !important;
+    padding-bottom: 12px !important;
     opacity: 0.5 !important;
 }
 
-._chaching__footer a:nth-child(0) {
+._chaching__leftmost {
     border-radius: 0 0 0 3px !important;
 }
 
-._chaching__footer a:nth-child(2) {
+._chaching__rightmost {
     border-radius: 0 0 3px 0 !important;
 }
 
-._chaching__footer a.active {
+._chaching__footer button:focus {
     border-bottom: 3px solid #FFC941 !important;
     opacity: 1 !important;
+    outline: 0 !important;
 }
 
-._chaching__home:focus {
-    border-bottom: 3px solid #FFC941 !important;
-    opacity: 1 !important;
+._chaching__footer button:focus ._chaching__content {
+    display: block !important;
 }
-._chaching__home:focus ~ ._chaching__home__content {
-    display: block;
-}
-._chaching__list:focus ~ ._chaching__list__content {
-    display: block;
-}
-._chaching__account:focus ~ ._chaching__account__content {
-    display: block;
+
+.mystyle {
+    background: #FF3636;
+    color: green;
+    margin-top: 300px;
 }
