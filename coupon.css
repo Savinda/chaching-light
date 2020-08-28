@@ -31,7 +31,7 @@
     text-align: center !important;
     font-weight: 400 !important;
     color: #343434 !important;
-    margin: 0px !important;
+    margin: -10px 0 0 0 !important;
     padding: 5px 0 !important;
 }
 
@@ -199,7 +199,10 @@
     height: 426px !important; 
     /* height: 150px; */
     width: 100% !important;
-    /* display: none; */
+}
+
+._chaching__list__content, ._chaching__account__content {
+    display: none;
 }
 
 ._chaching__footer {
@@ -238,6 +241,7 @@
     padding-top: 15px !important;
     padding-bottom: 12px !important;
     opacity: 0.5 !important;
+    height: 59px !important;
 }
 
 ._chaching__leftmost {
@@ -258,8 +262,44 @@
     display: block !important;
 }
 
-.mystyle {
-    background: #FF3636;
-    color: green;
-    margin-top: 300px;
+._chaching__account__content .listed-sites {
+    justify-content: space-between !important; 
+}
+
+._chaching__account__content .listed-sites li:nth-child(1) {
+    width: 0 !important; }
+
+._chaching__account__content .listed-sites .store-logo {
+    max-width: 100px !important; }
+
+._chaching__lgtext {
+    font-size: 16px !important;
+    text-transform: capitalize !important;
+}
+
+._chaching__urltext {
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+._chaching__storelogo__inlist {
+    margin-top: 5px !important;
+}
+
+._chaching__cta {
+    background: #FFFCF4  !important;
+    color: #FFC941 !important;
+    padding: 5px 10px !important;
+    display: inline-block !important;
+    border-radius: 3px !important;
+    border: 1px solid #FFDF8E !important;
+    cursor: pointer !important;
+    font-weight: bold !important;
+    float: right !important;
+    text-decoration: none !important;
+    margin-top: -15px !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
+._chaching__cta:hover {
+    text-decoration: none !important;
 }

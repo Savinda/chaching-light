@@ -43,6 +43,7 @@ const submitCoupon = (code, desc, domain) => {
 const parseCoupons = (coupons, domain) => {
   try {
     let couponHTML = '';
+    let domainsHTML = '';
     // loop over coupons in coupon's list
     for (let key in coupons) {
       let coupon = coupons[key];
@@ -53,6 +54,22 @@ const parseCoupons = (coupons, domain) => {
         '<p>' +
         coupon.desc +
         '</p></li>';
+    }
+    // loop over domain names in list
+    for (let key in domain) {
+      domainsHTML +=
+      '<li><img class="_chaching__storelogo _chaching__storelogo__inlist"' +
+      'src="https://graph.facebook.com/' +
+      domain_name +
+      '/picture?type=small" alt="">'+
+      '<span class="_chaching__lgtext">' +
+      domain_name +
+      '</span><br/><span class="_chaching__urltext">' + 
+      domain +
+      '</span>' +
+      '<a class="_chaching__cta" href="' + 
+      domain + 
+      '">View Coupons</a></li>';
     }
     // Display message if there is no coupon
     if (couponHTML === '') {
@@ -66,22 +83,24 @@ const parseCoupons = (coupons, domain) => {
       '<header class="_chaching__header">' +
       '<img class="_chaching__storelogo" src="https://graph.facebook.com/' +
       domain_name +
-      '/picture?type=small">'+
+      '/picture?type=small" alt="">'+
       '<div class="_chaching__heading">'+
       domain +
       '</div>' +
       '</header>' + 
       // HOME TAB
-      '<main class="_chaching__content _chaching__home__content"><div class="_chaching__submit-button">Submit A Coupon</div>' +
+      '<main class="_chaching__content _chaching__home__content">' +
       // '<p>Browse coupons below that have been used for <strong>' +
       // domain +
       // '</strong></p>' +
       '<p>Click any coupon to copy &amp; use</p>' +
       '<ul>' +
       couponHTML +
-      '</ul></main>' + 
+      '</ul><div class="_chaching__submit-button">Submit A Coupon</div></main>' + 
       // // LIST TAB
-      '<main class="_chaching__content _chaching__list__content">list</main>' +
+      '<main class="_chaching__content _chaching__list__content"><ul class="listed-sites">' +
+      domainsHTML +
+      '</ul></main>' + 
       // ACCOUNT TAB
       '<main class="_chaching__content _chaching__account__content">account</main>' +
       '<footer class="_chaching__footer">' +
@@ -97,45 +116,22 @@ const parseCoupons = (coupons, domain) => {
       '</footer>';
     document.body.appendChild(couponDisplay);
 
-    function myFunction() {
-      var element = document.getElementById("myDiv");
-      element.classList.toggle("mystyle");
-    }
-    // Show/hide list of coupons
+  
+    // Show/hide list of coupons 
+    // TO-DO write OOP
   document.querySelector('._chaching__leftmost').addEventListener('click', () => {
-    // if (document.querySelector('._chaching__home__content').style.display === 'block') {
-    //   document.querySelector('._chaching__list__content').style.display = 'none';
-    //   document.querySelector('._chaching__account__content').style.display = 'none';
-    // } 
-    // else {
-    //   document.querySelector('._chaching__home__content').style.display = 'none';
-    // }
     document.querySelector('._chaching__home__content').style.display = 'block';
     document.querySelector('._chaching__list__content').style.display = 'none';
     document.querySelector('._chaching__account__content').style.display = 'none';
   });
 
   document.querySelector('._chaching__mid').addEventListener('click', () => {
-    // if (document.querySelector('._chaching__home__content').style.display === 'none') {
-    //   document.querySelector('._chaching__list__content').style.display = 'block';
-    //   document.querySelector('._chaching__account__content').style.display = 'none';
-    // } 
-    // else {
-    //   document.querySelector('._chaching__list__content').style.display = 'none';
-    // }
     document.querySelector('._chaching__home__content').style.display = 'none';
     document.querySelector('._chaching__list__content').style.display = 'block';
     document.querySelector('._chaching__account__content').style.display = 'none';
   });
 
   document.querySelector('._chaching__rightmost').addEventListener('click', () => {
-    // if (document.querySelector('._chaching__home__content').style.display === 'none') {
-    //   document.querySelector('._chaching__list__content').style.display = 'none';
-    //   document.querySelector('._chaching__account__content').style.display = 'block';
-    // } 
-    // else {
-    //   document.querySelector('._chaching__account__content').style.display = 'none';
-    // }
     document.querySelector('._chaching__home__content').style.display = 'none';
     document.querySelector('._chaching__list__content').style.display = 'none';
     document.querySelector('._chaching__account__content').style.display = 'block';
@@ -152,7 +148,7 @@ const parseCoupons = (coupons, domain) => {
     couponSubmitOverlay.className = '_chaching_submit__overlay';
     couponSubmitOverlay.innerHTML =
       '<span class="_chaching_close-button"><img src="https://firebasestorage.googleapis.com/v0/b/chaching-light.appspot.com/o/icon_close.png?alt=media&token=07dc5fb6-02aa-440d-a348-c21eef232145"></span>' +
-      '<h3>Do you have a coupon for this site?</h3>' +
+      '<h3>Have a coupon for this site?</h3>' +
       '<div><label>Code:</label><input type="text" class="code"/></div>' +
       '<div><label>Description:</label><input type="text" class="desc"/></div>' +
       '<div><button class="_chaching__submit-button">Submit</button></div>';
@@ -205,6 +201,7 @@ const displayCouponList = () => {
     codeItem.addEventListener('click', () => {
       const codeStr = codeItem.innerHTML;
       copyToClipboard(codeStr);
+      alert("copied!");
     });
   });
 };
